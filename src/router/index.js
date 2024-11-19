@@ -108,6 +108,15 @@ export const routes = [
     }]
   },
   {
+    path: '/property',
+    component: Layout,
+    children: [{
+      path: '',
+      component: () => import('@/views/Property/index.vue'),
+      meta: { title: '物业费管理', icon: 'el-icon-wallet' }
+    }]
+  },
+  {
     path: '*',
     component: () => import('@/views/404'),
     hidden: true
